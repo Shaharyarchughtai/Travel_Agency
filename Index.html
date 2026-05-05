@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency</title>  
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="relative h-screen w-full overflow-hidden">
+    
+  <!-- Background Image & Subtle Overlay -->
+<div class="absolute inset-0 z-0">
+    <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&q=80&w=2070" 
+         alt="Hajj Umrah Banner" 
+         class="w-full h-full object-cover">
+    <!-- Naya Transparent Overlay -->
+    <div class="absolute inset-0 hero-overlay"></div> 
+</div>
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 nav-blur flex items-center justify-between px-10 py-6 text-white">
+        <div class="text-2xl font-black tracking-tighter uppercase italic">
+            WesternAero_<span class="text-[var(--secondary-blue)]">Travel</span>
+        </div>
+        
+        <ul class="hidden md:flex space-x-8 text-[11px] font-black uppercase tracking-[0.2em]">
+            <li class="hover:text-[var(--secondary-blue)] cursor-pointer transition-all">Home</li>
+            <li class="hover:text-[var(--secondary-blue)] cursor-pointer transition-all">Hajj Packages</li>
+            <li class="hover:text-[var(--secondary-blue)] cursor-pointer transition-all">Umrah Packages</li>
+            <li class="hover:text-[var(--secondary-blue)] cursor-pointer transition-all">Ramadan Umrah</li>
+            <li class="hover:text-[var(--secondary-blue)] cursor-pointer transition-all">Contact</li>
+        </ul>
+
+        <div class="flex items-center space-x-5">
+            <i class="fas fa-search cursor-pointer hover:text-[var(--secondary-blue)] text-sm"></i>
+            <i class="far fa-heart cursor-pointer hover:text-[var(--secondary-blue)] text-sm"></i>
+            <div class="bg-[var(--primary-blue)] p-2.5 rounded-xl cursor-pointer hover:brightness-110 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Center Content -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        <h1 class="text-6xl md:text-[110px] font-black uppercase tracking-tighter leading-none mb-4">
+            HAJJ <span class="text-[var(--secondary-blue)]">UMRAH</span>
+        </h1>
+        
+        <p class="text-sm md:text-xl font-bold tracking-[0.3em] uppercase text-gray-200">
+            Deluxe Umrah Packages Started From <span class="text-[var(--secondary-blue)] font-black">USD 3235</span>
+        </p>
+
+        <!-- CTA Button with Accent Yellow -->
+        <button class="cta-button mt-10 px-12 py-5 rounded-2xl font-black uppercase tracking-[0.2em] text-xs shadow-2xl active:scale-95 flex items-center gap-3">
+            Get Started <i class="fas fa-arrow-right text-[10px]"></i>
+        </button>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+        <div class="w-1 h-12 bg-gradient-to-b from-[var(--secondary-blue)] to-transparent rounded-full opacity-60"></div>
+    </div>
+</header>
+    <!-- Exact About Us Section with Diamond Grid -->
+<section class="py-20 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- 1. Brand Logos Row (Keeping your original code verbatim) -->
+        <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 mb-24 opacity-90">
+            <img src="https://www.bing.com/th/id/OIP.ghWODMtkz5Oi7qJqW-fzWgHaE8?w=193&h=135&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Qatar" class="h-16 md:h-20 object-contain filter grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer">
+            <img src="https://www.bing.com/th/id/OIP.fdjfBYCwamJtism_-XCdjAHaHa?w=193&h=193&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Saudia" class="h-20 md:h-24 object-contain filter grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer">
+            <img src="https://www.bing.com/th/id/OIP.ahoSDF0hqFMuOuhv4SnT8wHaHa?w=193&h=193&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Air Arabia" class="h-16 md:h-20 object-contain filter grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer">
+            <img src="https://www.bing.com/th/id/OIP.x5252KkglEHzuItqyjJmiAHaFj?w=193&h=145&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Emirates" class="h-20 md:h-24 object-contain filter grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer">
+            <img src="https://thf.bing.com/th/id/OIP._R_e5AZtVAxB8I7iyqLLWgHaE8?w=217&h=180&c=7&r=0&o=7&cb=thfc1&pid=1.7&rm=3" alt="Kuwait" class="h-12 md:h-16 object-contain filter grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer">
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            
+            <!-- 2. Left Side: Enhanced Two-Image Composition -->
+            <div class="relative w-full h-[600px] flex items-center justify-center lg:justify-start group">
+                
+                <!-- Base Image (Back) -->
+                <div class="relative w-[80%] h-[85%] rounded-[60px] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.2)] border-[12px] border-white z-10 transform group-hover:-rotate-2 transition-transform duration-700">
+                    <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/30 to-transparent"></div>
+                </div>
+
+                <!-- Overlay Image (Front) -->
+                <div class="absolute -right-4 bottom-4 w-[55%] h-[55%] rounded-[45px] overflow-hidden shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] z-20 border-[10px] border-white transform group-hover:scale-105 transition-transform duration-700">
+                    <img src="https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Glassmorphism Badge -->
+                <div class="absolute -left-6 bottom-24 bg-white/80 backdrop-blur-xl p-8 rounded-[30px] shadow-2xl z-30 border border-white/50 animate-float">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-600/30">
+                            <i class="fas fa-check-circle text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-black text-slate-900 leading-none">20+</p>
+                            <p class="text-[10px] uppercase font-bold text-gray-500 tracking-widest mt-1">Years Expert</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Right Side: Content & Interactive Feature Cards -->
+            <div class="lg:pl-6">
+                <div class="mb-12">
+                    <p class="text-4xl font-serif text-gray-400 mb-4 opacity-50">﷽</p>
+                    <h2 class="text-5xl font-black text-slate-900 leading-[1.15] mb-8">
+                        We are award winning <br> 
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">Hajj & Umrah Agency</span>
+                    </h2>
+                    <p class="text-gray-500 text-lg leading-relaxed max-w-xl">
+                        We have been worked within the hajj and umrah travel industry for over 20 years and we're confident enough to say that we know our stuff, capability and hospitality.
+                    </p>
+                </div>
+
+                <!-- Interactive Features Grid -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex items-center p-4 rounded-2xl bg-blue-50/50 border border-transparent hover:border-blue-100 hover:bg-white hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fas fa-hotel text-white text-sm"></i>
+                        </div>
+                        <span class="ml-4 text-sm font-bold text-slate-700">Luxury hotel</span>
+                    </div>
+
+                    <div class="flex items-center p-4 rounded-2xl bg-blue-50/50 border border-transparent hover:border-blue-100 hover:bg-white hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fas fa-plane text-white text-sm"></i>
+                        </div>
+                        <span class="ml-4 text-sm font-bold text-slate-700">VIP Plane sit</span>
+                    </div>
+
+                    <div class="flex items-center p-4 rounded-2xl bg-blue-50/50 border border-transparent hover:border-blue-100 hover:bg-white hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fas fa-passport text-white text-sm"></i>
+                        </div>
+                        <span class="ml-4 text-sm font-bold text-slate-700">Easy Visa</span>
+                    </div>
+
+                    <div class="flex items-center p-4 rounded-2xl bg-blue-50/50 border border-transparent hover:border-blue-100 hover:bg-white hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fas fa-utensils text-white text-sm"></i>
+                        </div>
+                        <span class="ml-4 text-sm font-bold text-slate-700">Fresh Food</span>
+                    </div>
+
+                    <div class="flex items-center p-4 rounded-2xl bg-blue-50/50 border border-transparent hover:border-blue-100 hover:bg-white hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fas fa-shield-alt text-white text-sm"></i>
+                        </div>
+                        <span class="ml-4 text-sm font-bold text-slate-700">Avoid Haram</span>
+                    </div>
+
+                    <div class="flex items-center p-4 rounded-2xl bg-blue-50/50 border border-transparent hover:border-blue-100 hover:bg-white hover:shadow-xl transition-all duration-300 group">
+                        <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                            <i class="fas fa-car text-white text-sm"></i>
+                        </div>
+                        <span class="ml-4 text-sm font-bold text-slate-700">Air condition car</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Packages Grid Section -->
+<section class="py-20 bg-[var(--bg-white)]">
+    <div class="max-w-7xl mx-auto px-4">
+        
+        <!-- Main Dark Container (Refined Mehrab Style) -->
+        <!-- Added overflow-visible to allow arch to sit perfectly -->
+        <div class="relative bg-slate-900 rounded-[60px] p-10 border-[3px] border-[var(--primary-blue)] shadow-[0_20px_50px_rgba(0,0,0,0.3)] mt-10">
+            
+            <!-- Top Arch Decoration (The Mehrab - Refined to match 2nd image) -->
+            <div class="absolute -top-[52px] left-1/2 -translate-x-1/2 w-56 h-28 bg-slate-900 border-t-[3px] border-l-[3px] border-r-[3px] border-[var(--primary-blue)] rounded-t-[100px] flex items-center justify-center z-10">
+                <!-- Inner curve effect to smooth the junction -->
+                <div class="absolute -bottom-1 left-[-20px] w-5 h-5 bg-transparent shadow-[10px_10px_0_0_#0f172a] rounded-br-full"></div>
+                <div class="absolute -bottom-1 right-[-20px] w-5 h-5 bg-transparent shadow-[-10px_10px_0_0_#0f172a] rounded-bl-full"></div>
+                
+                <i class="fas fa-kaaba text-[var(--secondary-blue)] text-3xl mb-4"></i>
+            </div>
+
+            <!-- Heading Area -->
+            <div class="text-center mt-12 mb-12">
+                <h2 class="text-white text-3xl md:text-4xl font-black tracking-tight mb-2">
+                    'UMRAH 2026: INTEGRATED CAMPAIGN SUITE'
+                </h2>
+                <div class="flex items-center justify-center gap-4">
+                    <div class="h-[1px] w-12 bg-[var(--primary-blue)]"></div>
+                    <p class="text-[var(--secondary-blue)] text-sm tracking-[0.4em] font-bold uppercase">
+                        A Journey For Everyone - August
+                    </p>
+                    <div class="h-[1px] w-12 bg-[var(--primary-blue)]"></div>
+                </div>
+            </div>
+
+            <!-- Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                
+                <!-- Card 1: Best Value -->
+                <div class="group relative overflow-hidden rounded-[30px] aspect-square bg-white border-2 border-slate-700/50 hover:border-[var(--secondary-blue)] transition-all duration-500 cursor-pointer shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1720195899208-d5555176d1d9?q=80&w=435&auto=format&fit=crop" class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent flex flex-col justify-end p-6 text-center text-white">
+                        <span class="text-[10px] uppercase font-black text-[var(--secondary-blue)] tracking-widest mb-1">Best Value</span>
+                        <h3 class="text-2xl font-bold italic">Umrah</h3>
+                        <p class="text-[10px] opacity-70">Day Scene</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Premium Black -->
+                <div class="group relative overflow-hidden rounded-[30px] aspect-square bg-black border-2 border-slate-700 hover:border-[var(--secondary-blue)] transition-all duration-500 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1736240624842-c13db7ba4275?w=500&auto=format&fit=crop&q=60" class="w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 flex flex-col justify-center items-center p-6 text-center text-white">
+                        <h3 class="text-3xl font-serif tracking-tighter">UMRAH</h3>
+                        <div class="w-full max-w-[120px] border-t border-b border-white/30 py-1 my-3">
+                             <p class="text-[9px] tracking-[0.2em]">AUGUST - 2026</p>
+                        </div>
+                        <span class="text-xs font-black text-[var(--secondary-blue)] tracking-[0.3em]">PREMIUM</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Haram View -->
+                <div class="group relative overflow-hidden rounded-[30px] aspect-square bg-white border-2 border-slate-700/50 hover:border-[var(--secondary-blue)] transition-all duration-500 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1735405227277-9c39ae38647a?q=80&w=327&auto=format&fit=crop" class="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center p-6 text-center text-white">
+                        <span class="text-[10px] uppercase font-bold tracking-widest mb-1 opacity-70">Premium</span>
+                        <h3 class="text-3xl font-black italic tracking-tighter">Umrah</h3>
+                        <p class="text-[10px] mb-3">Haram View</p>
+                        <div class="flex text-[var(--secondary-blue)] text-[10px] gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Economy White -->
+                <div class="group relative overflow-hidden rounded-[30px] aspect-square bg-gray-50 border-2 border-slate-200 hover:border-[var(--primary-blue)] transition-all duration-500 cursor-pointer">
+                    <div class="absolute inset-0 flex flex-col justify-center items-center p-6 text-center">
+                        <div class="w-20 h-20 border-[1px] border-gray-200 rounded-t-full mb-4 flex items-center justify-center bg-white shadow-inner">
+                            <i class="fas fa-mosque text-[var(--primary-blue)] text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-black text-gray-800 tracking-tighter">UMRAH</h3>
+                        <p class="text-[10px] text-gray-400 font-bold mb-4">AUGUST - 2025</p>
+                        <span class="bg-[var(--primary-blue)] text-white text-[10px] px-5 py-1.5 rounded-full uppercase font-black tracking-widest shadow-md">Economy</span>
+                    </div>
+                </div>
+
+                <!-- Row 2 Card 5: Premium Night -->
+                <div class="group relative overflow-hidden rounded-[30px] aspect-square bg-slate-800 border-2 border-slate-700 hover:border-[var(--secondary-blue)] transition-all duration-500 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 flex flex-col justify-center items-center p-6 text-center text-white">
+                        <span class="text-[10px] uppercase font-bold tracking-widest mb-1 opacity-70">Premium</span>
+                        <div class="flex text-[var(--secondary-blue)] text-[9px] mb-4 gap-1">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="text-3xl font-black tracking-tighter mb-1">UMRAH</h3>
+                        <p class="text-[10px] font-bold tracking-widest opacity-80">HARAM VIEW</p>
+                    </div>
+                </div>
+
+                <!-- Card 6: Family Package -->
+                <div class="group relative overflow-hidden rounded-[30px] aspect-square bg-blue-900 border-2 border-blue-400 hover:border-white transition-all duration-500 cursor-pointer shadow-inner">
+                    <div class="absolute inset-0 bg-blue-950/60 flex flex-col justify-center items-center p-6 text-center text-white">
+                        <h3 class="text-4xl font-serif italic text-blue-200 mb-2">Umrah</h3>
+                        <p class="text-[9px] tracking-[0.3em] font-bold opacity-70 mb-4 uppercase">August - 2026</p>
+                        <div class="border-2 border-white/30 px-6 py-2 rounded-xl backdrop-blur-sm group-hover:border-white transition-all">
+                            <span class="text-xs uppercase font-black tracking-[0.2em]">Family</span>
+                            <p class="text-[8px] font-bold opacity-60">Package</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7: Ramadan Special -->
+                <div class="group relative overflow-hidden rounded-[30px] aspect-square bg-rose-900 border-2 border-rose-800 hover:border-rose-400 transition-all duration-500 cursor-pointer">
+                    <div class="absolute inset-0 flex flex-col justify-center items-center p-6 text-center text-white">
+                        <div class="relative mb-4">
+                            <i class="fas fa-moon text-4xl text-yellow-200/20 absolute -top-2 -left-2 rotate-12"></i>
+                            <i class="fas fa-moon text-3xl text-yellow-400 relative z-10"></i>
+                        </div>
+                        <h3 class="text-xl font-black leading-none tracking-tighter mb-1">RAMADAN</h3>
+                        <h3 class="text-2xl font-black leading-none tracking-tighter mb-4 text-yellow-400">SPECIAL</h3>
+                        <div class="h-[1px] w-12 bg-white/30 mb-4 mx-auto"></div>
+                        <p class="text-[10px] font-bold tracking-widest opacity-70 italic uppercase">Iftar Buffet</p>
+                    </div>
+                </div>
+
+                <!-- Card 8: Overview (Text Section) -->
+                <div class="flex flex-col justify-center p-6 text-white bg-slate-800/30 rounded-[30px] border border-white/5">
+                    <h3 class="text-xl font-black border-b-2 border-[var(--secondary-blue)] pb-3 mb-6 tracking-widest">OVERVIEW</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-center space-x-4 group cursor-pointer">
+                            <div class="w-8 h-8 rounded-lg bg-slate-700/50 flex items-center justify-center group-hover:bg-[var(--secondary-blue)] group-hover:text-slate-900 transition-all">
+                                <i class="fab fa-instagram text-sm"></i>
+                            </div>
+                            <span class="text-[11px] font-bold uppercase tracking-[0.2em] opacity-80 group-hover:opacity-100 transition-all">Multi-Channel</span>
+                        </li>
+                        <li class="flex items-center space-x-4 group cursor-pointer">
+                            <div class="w-8 h-8 rounded-lg bg-slate-700/50 flex items-center justify-center group-hover:bg-[var(--secondary-blue)] group-hover:text-slate-900 transition-all">
+                                <i class="fab fa-facebook-f text-sm"></i>
+                            </div>
+                            <span class="text-[11px] font-bold uppercase tracking-[0.2em] opacity-80 group-hover:opacity-100 transition-all">Content Strategy</span>
+                        </li>
+                        <li class="flex items-center space-x-4 group cursor-pointer">
+                            <div class="w-8 h-8 rounded-lg bg-slate-700/50 flex items-center justify-center group-hover:bg-[var(--secondary-blue)] group-hover:text-slate-900 transition-all">
+                                <i class="fas fa-users text-sm"></i>
+                            </div>
+                            <span class="text-[11px] font-bold uppercase tracking-[0.2em] opacity-80 group-hover:opacity-100 transition-all">User Experience</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hotels Selection Section -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Section Header -->
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <p class="text-blue-600 font-bold uppercase tracking-widest text-xs mb-3">Best Stay for You</p>
+                <h2 class="text-4xl font-black text-slate-900 tracking-tight">Luxury Hotels in Holy Cities</h2>
+            </div>
+            <a href="#" class="text-sm font-bold text-gray-500 hover:text-blue-600 transition-colors mb-2">View All Hotels <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+        </div>
+
+        <!-- Hotels Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Hotel Card 1 -->
+            <div class="bg-white rounded-[40px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group border border-gray-100">
+                <!-- Hotel Image -->
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute top-5 right-5 bg-white/90 backdrop-blur-md px-4 py-1 rounded-full shadow-sm">
+                        <p class="text-xs font-bold text-slate-900"><i class="fas fa-star text-amber-400 mr-1"></i> 5.0</p>
+                    </div>
+                    <div class="absolute bottom-5 left-5 bg-blue-600 text-white px-4 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider">
+                        Makkah
+                    </div>
+                </div>
+
+                <!-- Hotel Details -->
+                <div class="p-8">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Pullman Zamzam Makkah</h3>
+                    <p class="text-gray-400 text-xs flex items-center mb-6">
+                        <i class="fas fa-map-marker-alt mr-2 text-blue-600"></i> Abraj Al Bait Complex, Makkah
+                    </p>
+
+                    <!-- Stats Row -->
+                    <div class="flex justify-between items-center py-4 border-y border-gray-50 mb-6">
+                        <div class="text-center">
+                            <i class="fas fa-bed text-blue-600 mb-1 text-sm"></i>
+                            <p class="text-[10px] font-bold text-gray-700 uppercase">2 Beds</p>
+                        </div>
+                        <div class="w-[1px] h-8 bg-gray-100"></div>
+                        <div class="text-center">
+                            <i class="fas fa-walking text-blue-600 mb-1 text-sm"></i>
+                            <p class="text-[10px] font-bold text-gray-700 uppercase">5 Min Walk</p>
+                        </div>
+                        <div class="w-[1px] h-8 bg-gray-100"></div>
+                        <div class="text-center">
+                            <i class="fas fa-kaaba text-blue-600 mb-1 text-sm"></i>
+                            <p class="text-[10px] font-bold text-gray-700 uppercase">Haram View</p>
+                        </div>
+                    </div>
+
+                    <!-- Price & Action -->
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-400 text-[10px] uppercase font-bold tracking-widest">Starting From</p>
+                            <p class="text-2xl font-black text-blue-600">$120<span class="text-xs text-gray-400 font-medium">/Night</span></p>
+                        </div>
+                        <button class="bg-slate-900 text-white p-4 rounded-2xl hover:bg-blue-600 transition-colors shadow-lg">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel Card 2 -->
+            <div class="bg-white rounded-[40px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group border border-gray-100">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute top-5 right-5 bg-white/90 backdrop-blur-md px-4 py-1 rounded-full shadow-sm">
+                        <p class="text-xs font-bold text-slate-900"><i class="fas fa-star text-amber-400 mr-1"></i> 4.8</p>
+                    </div>
+                    <div class="absolute bottom-5 left-5 bg-blue-600 text-white px-4 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider">
+                        Madinah
+                    </div>
+                </div>
+
+                <div class="p-8">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Anwar Al Madinah Mövenpick</h3>
+                    <p class="text-gray-400 text-xs flex items-center mb-6">
+                        <i class="fas fa-map-marker-alt mr-2 text-blue-600"></i> Central Area, Madinah
+                    </p>
+
+                    <div class="flex justify-between items-center py-4 border-y border-gray-50 mb-6">
+                        <div class="text-center">
+                            <i class="fas fa-bed text-blue-600 mb-1 text-sm"></i>
+                            <p class="text-[10px] font-bold text-gray-700 uppercase">3 Beds</p>
+                        </div>
+                        <div class="w-[1px] h-8 bg-gray-100"></div>
+                        <div class="text-center">
+                            <i class="fas fa-walking text-blue-600 mb-1 text-sm"></i>
+                            <p class="text-[10px] font-bold text-gray-700 uppercase">2 Min Walk</p>
+                        </div>
+                        <div class="w-[1px] h-8 bg-gray-100"></div>
+                        <div class="text-center">
+                            <i class="fas fa-wifi text-blue-600 mb-1 text-sm"></i>
+                            <p class="text-[10px] font-bold text-gray-700 uppercase">Free WiFi</p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-400 text-[10px] uppercase font-bold tracking-widest">Starting From</p>
+                            <p class="text-2xl font-black text-blue-600">$95<span class="text-xs text-gray-400 font-medium">/Night</span></p>
+                        </div>
+                        <button class="bg-slate-900 text-white p-4 rounded-2xl hover:bg-blue-600 transition-colors shadow-lg">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hotel Card 3 -->
+            <div class="bg-white rounded-[40px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group border border-gray-100">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute top-5 right-5 bg-white/90 backdrop-blur-md px-4 py-1 rounded-full shadow-sm">
+                        <p class="text-xs font-bold text-slate-900"><i class="fas fa-star text-amber-400 mr-1"></i> 4.9</p>
+                    </div>
+                    <div class="absolute bottom-5 left-5 bg-blue-600 text-white px-4 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider">
+                        Makkah
+                    </div>
+                </div>
+
+                <div class="p-8">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Conrad Makkah Hotel</h3>
+                    <p class="text-gray-400 text-xs flex items-center mb-6">
+                        <i class="fas fa-map-marker-alt mr-2 text-blue-600"></i> Ibrahim Al Khalil St, Makkah
+                    </p>
+
+                    <div class="flex justify-between items-center py-4 border-y border-gray-50 mb-6">
+                        <div class="text-center">
+                            <i class="fas fa-bed text-blue-600 mb-1 text-sm"></i>
+                            <p class="text-[10px] font-bold text-gray-700 uppercase">2 Beds</p>
+                        </div>
+                        <div class="w-[1px] h-8 bg-gray-100"></div>
+                        <div class="text-center">
+                            <i class="fas fa-walking text-blue-600 mb-1 text-sm"></i>
+                            <p class="text-[10px] font-bold text-gray-700 uppercase">7 Min Walk</p>
+                        </div>
+                        <div class="w-[1px] h-8 bg-gray-100"></div>
+                        <div class="text-center">
+                            <i class="fas fa-coffee text-blue-600 mb-1 text-sm"></i>
+                            <p class="text-[10px] font-bold text-gray-700 uppercase">Breakfast</p>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-400 text-[10px] uppercase font-bold tracking-widest">Starting From</p>
+                            <p class="text-2xl font-black text-blue-600">$150<span class="text-xs text-gray-400 font-medium">/Night</span></p>
+                        </div>
+                        <button class="bg-slate-900 text-white p-4 rounded-2xl hover:bg-blue-600 transition-colors shadow-lg">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Transports -->
+<section class="py-24 bg-gray-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div class="max-w-2xl">
+                <div class="inline-block px-4 py-1 rounded-full bg-blue-50 border border-blue-100 mb-4">
+                    <span class="text-[10px] font-black text-blue-600 uppercase tracking-[0.3em]">Premium Mobility</span>
+                </div>
+                <h2 class="text-5xl font-black text-slate-900 leading-tight">Luxury <br> <span class="text-blue-600">Transport Services</span></h2>
+            </div>
+            <a href="#" class="group flex items-center gap-2.5 pb-2 text-sm font-bold text-gray-500 hover:text-blue-600 transition-all">
+                See All Vehicles
+                <i class="fas fa-arrow-right text-[10px] transform group-hover:translate-x-1.5 transition-transform"></i>
+            </a>
+        </div>
+
+        <!-- Transport Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            
+            <!-- Vehicle Card 1: GMC Yukon -->
+            <div class="group relative bg-white rounded-[40px] overflow-hidden border border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:shadow-2xl transition-all duration-500">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute top-6 left-6">
+                        <span class="bg-blue-600 text-white px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest">VIP Class</span>
+                    </div>
+                </div>
+                
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-2xl font-black text-slate-900 italic">GMC Yukon XL</h3>
+                            <p class="text-xs font-bold text-blue-600 uppercase tracking-widest mt-1">Luxury SUV</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest">Starting From</p>
+                            <span class="text-2xl font-black text-slate-900">$250</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center text-slate-700">
+                            <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3">
+                                <i class="fas fa-map-marker-alt text-[10px] text-blue-600"></i>
+                            </div>
+                            <span class="text-[11px] font-black uppercase tracking-wider">Jeddah <i class="fas fa-arrow-right mx-2 text-[8px] opacity-30"></i> Makkah</span>
+                        </div>
+                        <div class="flex items-center text-slate-700">
+                            <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3">
+                                <i class="fas fa-users text-[10px] text-blue-600"></i>
+                            </div>
+                            <span class="text-[11px] font-black uppercase tracking-wider">Up to 7 Passengers</span>
+                        </div>
+                        <div class="flex items-center text-slate-700">
+                            <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3">
+                                <i class="fas fa-suitcase text-[10px] text-blue-600"></i>
+                            </div>
+                            <span class="text-[11px] font-black uppercase tracking-wider">Large Luggage Space</span>
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-slate-900 hover:bg-blue-600 text-white py-4 rounded-2xl font-black uppercase tracking-widest text-[10px] transition-all shadow-lg">
+                        Book Transfer
+                    </button>
+                </div>
+            </div>
+
+            <!-- Vehicle Card 2: Hyundai H1 -->
+            <div class="group relative bg-white rounded-[40px] overflow-hidden border border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:shadow-2xl transition-all duration-500">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute top-6 left-6">
+                        <span class="bg-blue-600 text-white px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest">Family Choice</span>
+                    </div>
+                </div>
+                
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-2xl font-black text-slate-900 italic">Hyundai H1</h3>
+                            <p class="text-xs font-bold text-blue-600 uppercase tracking-widest mt-1">Executive Van</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest">Starting From</p>
+                            <span class="text-2xl font-black text-slate-900">$180</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center text-slate-700">
+                            <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3">
+                                <i class="fas fa-map-marker-alt text-[10px] text-blue-600"></i>
+                            </div>
+                            <span class="text-[11px] font-black uppercase tracking-wider">Makkah <i class="fas fa-arrow-right mx-2 text-[8px] opacity-30"></i> Madinah</span>
+                        </div>
+                        <div class="flex items-center text-slate-700">
+                            <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3">
+                                <i class="fas fa-users text-[10px] text-blue-600"></i>
+                            </div>
+                            <span class="text-[11px] font-black uppercase tracking-wider">Up to 9 Passengers</span>
+                        </div>
+                        <div class="flex items-center text-slate-700">
+                            <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3">
+                                <i class="fas fa-snowflake text-[10px] text-blue-600"></i>
+                            </div>
+                            <span class="text-[11px] font-black uppercase tracking-wider">Dual AC System</span>
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-slate-900 hover:bg-blue-600 text-white py-4 rounded-2xl font-black uppercase tracking-widest text-[10px] transition-all shadow-lg">
+                        Book Transfer
+                    </button>
+                </div>
+            </div>
+
+            <!-- Vehicle Card 3: Toyota Camry -->
+            <div class="group relative bg-white rounded-[40px] overflow-hidden border border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.05)] hover:shadow-2xl transition-all duration-500">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute top-6 left-6">
+                        <span class="bg-blue-600 text-white px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest">Economy</span>
+                    </div>
+                </div>
+                
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <h3 class="text-2xl font-black text-slate-900 italic">Toyota Camry</h3>
+                            <p class="text-xs font-bold text-blue-600 uppercase tracking-widest mt-1">Private Sedan</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest">Starting From</p>
+                            <span class="text-2xl font-black text-slate-900">$120</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-center text-slate-700">
+                            <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3">
+                                <i class="fas fa-map-marker-alt text-[10px] text-blue-600"></i>
+                            </div>
+                            <span class="text-[11px] font-black uppercase tracking-wider">Airport <i class="fas fa-arrow-right mx-2 text-[8px] opacity-30"></i> Hotel</span>
+                        </div>
+                        <div class="flex items-center text-slate-700">
+                            <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3">
+                                <i class="fas fa-users text-[10px] text-blue-600"></i>
+                            </div>
+                            <span class="text-[11px] font-black uppercase tracking-wider">Up to 4 Passengers</span>
+                        </div>
+                        <div class="flex items-center text-slate-700">
+                            <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3">
+                                <i class="fas fa-shield-alt text-[10px] text-blue-600"></i>
+                            </div>
+                            <span class="text-[11px] font-black uppercase tracking-wider">Professional Driver</span>
+                        </div>
+                    </div>
+
+                    <button class="w-full bg-slate-900 hover:bg-blue-600 text-white py-4 rounded-2xl font-black uppercase tracking-widest text-[10px] transition-all shadow-lg">
+                        Book Transfer
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Travel Packages Section -->
+<section class="py-24 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div class="max-w-2xl">
+                <div class="inline-block px-4 py-1 rounded-full bg-blue-50 border border-blue-100 mb-4">
+                    <span class="text-[10px] font-black text-blue-600 uppercase tracking-[0.3em]">Featured Bundles</span>
+                </div>
+                <h2 class="text-5xl font-black text-slate-900 leading-tight">All-Inclusive <br> <span class="text-blue-600">Umrah Packages</span></h2>
+            </div>
+            <a href="#" class="text-sm font-bold text-gray-500 hover:text-blue-600 transition-colors mb-2">View All Packages<i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+        </div>
+
+        <!-- Packages Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+            
+            <!-- Package Card 1: Economy Saver -->
+            <div class="relative">
+                <input type="radio" name="pkg-select" id="pkg1" class="package-input">
+                <label for="pkg1" class="package-label block cursor-pointer">
+                    <div class="relative h-72 rounded-[40px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1608023136037-626dad6c6188?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGVjb25vbXklMjBhaXJsaW5lfGVufDB8fDB8fHww" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <span class="bg-blue-600 px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest">15 Days</span>
+                            <h3 class="text-2xl font-black mt-2 italic uppercase tracking-tighter">Economy Saver</h3>
+                        </div>
+                    </div>
+                    <div class="px-4 py-8">
+                        <div class="space-y-4 mb-8">
+                            <!-- Makkah Hotel -->
+                            <div class="flex items-center justify-between feature-text">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3 icon-box">
+                                        <i class="fas fa-kaaba text-[10px] text-blue-600"></i>
+                                    </div>
+                                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Makkah</span>
+                                </div>
+                                <span class="text-[11px] font-bold text-slate-700">3★ (600m Distance)</span>
+                            </div>
+                            <!-- Madinah Hotel -->
+                            <div class="flex items-center justify-between feature-text">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3 icon-box">
+                                        <i class="fas fa-mosque text-[10px] text-blue-600"></i>
+                                    </div>
+                                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Madinah</span>
+                                </div>
+                                <span class="text-[11px] font-bold text-slate-700">3★ (Markazia)</span>
+                            </div>
+                            <!-- Airline -->
+                            <div class="flex items-center justify-between feature-text">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3 icon-box">
+                                        <i class="fas fa-plane text-[10px] text-blue-600"></i>
+                                    </div>
+                                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Flight</span>
+                                </div>
+                                <span class="text-[11px] font-bold text-slate-700">Air Blue / Indirect</span>
+                            </div>
+                            <!-- Transport -->
+                            <div class="flex items-center justify-between feature-text">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3 icon-box">
+                                        <i class="fas fa-bus text-[10px] text-blue-600"></i>
+                                    </div>
+                                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Transport</span>
+                                </div>
+                                <span class="text-[11px] font-bold text-slate-700">Luxury Sharing Bus</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-6 border-t border-gray-100">
+                            <div>
+                                <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest">Per Person</p>
+                                <span class="text-3xl font-black text-slate-900">$850</span>
+                            </div>
+                            <button class="book-btn bg-blue-600 text-white px-6 py-3 rounded-2xl font-bold text-xs transition-all shadow-lg">Book Now</button>
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Package Card 2: Premium Executive (Active) -->
+            <div class="relative">
+                <input type="radio" name="pkg-select" id="pkg2" class="package-input" checked>
+                <label for="pkg2" class="package-label block cursor-pointer">
+                    <div class="relative h-72 rounded-[40px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&q=80&w=500" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        <div class="absolute top-6 right-6 bg-amber-400 text-slate-900 px-4 py-1 rounded-full text-[10px] font-black uppercase italic">Best Choice</div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <span class="bg-amber-400 text-slate-900 px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest">10 Days</span>
+                            <h3 class="text-2xl font-black mt-2 italic uppercase tracking-tighter">Premium Executive</h3>
+                        </div>
+                    </div>
+                    <div class="px-4 py-8">
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center justify-between feature-text">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3 icon-box">
+                                        <i class="fas fa-kaaba text-[10px] text-blue-600"></i>
+                                    </div>
+                                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Makkah</span>
+                                </div>
+                                <span class="text-[11px] font-bold text-slate-800">5★ (Hilton Suites)</span>
+                            </div>
+                            <div class="flex items-center justify-between feature-text">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3 icon-box">
+                                        <i class="fas fa-mosque text-[10px] text-blue-600"></i>
+                                    </div>
+                                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Madinah</span>
+                                </div>
+                                <span class="text-[11px] font-bold text-slate-800">5★ (Front Row)</span>
+                            </div>
+                            <div class="flex items-center justify-between feature-text">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3 icon-box">
+                                        <i class="fas fa-plane text-[10px] text-blue-600"></i>
+                                    </div>
+                                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Flight</span>
+                                </div>
+                                <span class="text-[11px] font-bold text-slate-800">Saudi Airlines (Direct)</span>
+                            </div>
+                            <div class="flex items-center justify-between feature-text">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3 icon-box">
+                                        <i class="fas fa-car-side text-[10px] text-blue-600"></i>
+                                    </div>
+                                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Transport</span>
+                                </div>
+                                <span class="text-[11px] font-bold text-slate-800">Private Luxury GMC</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-6 border-t border-gray-100">
+                            <div>
+                                <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest">Per Person</p>
+                                <span class="text-3xl font-black text-slate-900">$1,450</span>
+                            </div>
+                            <button class="book-btn bg-blue-600 text-white px-6 py-3 rounded-2xl font-bold text-xs transition-all shadow-lg">Book Now</button>
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Package Card 3: Golden Hajj -->
+            <div class="relative">
+                <input type="radio" name="pkg-select" id="pkg3" class="package-input">
+                <label for="pkg3" class="package-label block cursor-pointer">
+                    <div class="relative h-72 rounded-[40px] overflow-hidden">
+                        <img src="https://plus.unsplash.com/premium_photo-1682377521564-b180edfc960c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGx1eHVyeSUyMHZpbGF8ZW58MHx8MHx8fDA%3D" class="w-full h-full object-cover transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 text-white">
+                            <span class="bg-blue-600 px-3 py-1 rounded-lg text-[10px] font-bold uppercase tracking-widest">21 Days</span>
+                            <h3 class="text-2xl font-black mt-2 italic uppercase tracking-tighter">Golden Hajj</h3>
+                        </div>
+                    </div>
+                    <div class="px-4 py-8">
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center justify-between feature-text">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3 icon-box">
+                                        <i class="fas fa-kaaba text-[10px] text-blue-600"></i>
+                                    </div>
+                                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Makkah</span>
+                                </div>
+                                <span class="text-[11px] font-bold text-slate-800">5★ (Clock Tower)</span>
+                            </div>
+                            <div class="flex items-center justify-between feature-text">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3 icon-box">
+                                        <i class="fas fa-mosque text-[10px] text-blue-600"></i>
+                                    </div>
+                                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Madinah</span>
+                                </div>
+                                <span class="text-[11px] font-bold text-slate-800">5★ (Near Gate 25)</span>
+                            </div>
+                            <div class="flex items-center justify-between feature-text">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3 icon-box">
+                                        <i class="fas fa-plane text-[10px] text-blue-600"></i>
+                                    </div>
+                                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Flight</span>
+                                </div>
+                                <span class="text-[11px] font-bold text-slate-800">Qatar / Emirates</span>
+                            </div>
+                            <div class="flex items-center justify-between feature-text">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center mr-3 icon-box">
+                                        <i class="fas fa-shuttle-van text-[10px] text-blue-600"></i>
+                                    </div>
+                                    <span class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Transport</span>
+                                </div>
+                                <span class="text-[11px] font-bold text-slate-800">Private VIP SUV</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pt-6 border-t border-gray-100">
+                            <div>
+                                <p class="text-[9px] font-black text-gray-400 uppercase tracking-widest">Per Person</p>
+                                <span class="text-3xl font-black text-slate-900">$4,200</span>
+                            </div>
+                            <button class="book-btn bg-blue-600 text-white px-6 py-3 rounded-2xl font-bold text-xs transition-all shadow-lg">Book Now</button>
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Compact Journey Architect Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        
+        <div class="mb-10">
+            <h2 class="text-4xl font-black text-slate-900 tracking-tighter uppercase italic">
+                Custom <span class="text-blue-600">Umrah Builder</span>
+            </h2>
+            <div class="h-1 w-20 bg-blue-600 mt-2"></div>
+        </div>
+
+        <div class="bg-white rounded-[40px] shadow-[0_20px_60px_rgba(0,0,0,0.08)] overflow-hidden grid grid-cols-1 lg:grid-cols-12 border border-gray-100">
+            
+            <!-- Left Side: Selection Area -->
+            <div class="lg:col-span-8 p-8 md:p-12">
+                <div class="grid grid-cols-1 gap-10">
+                    
+                    <!-- 01. Travelers -->
+                    <div class="space-y-4">
+                        <h4 class="vibrant-label"><span>01.</span> Who is traveling?</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <label>
+                                <input type="radio" name="travelers" class="journey-radio" checked>
+                                <div class="select-card flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 text-sm">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-black text-slate-800">Solo / Couple</p>
+                                        <p class="text-[9px] text-blue-600 font-bold uppercase">1-2 Members</p>
+                                    </div>
+                                </div>
+                            </label>
+                            <label>
+                                <input type="radio" name="travelers" class="journey-radio">
+                                <div class="select-card flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 text-sm">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-black text-slate-800">Family Group</p>
+                                        <p class="text-[9px] text-blue-600 font-bold uppercase">3+ Members</p>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 02. Flight & Cabin -->
+                    <div class="space-y-4">
+                        <h4 class="vibrant-label"><span>02.</span> Flight & Cabin</h4>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <label>
+                                <input type="radio" name="airline" class="journey-radio" checked>
+                                <div class="select-card text-center py-3">
+                                    <p class="text-[10px] font-black text-slate-800">SAUDIA</p>
+                                    <p class="text-[8px] text-blue-600 font-bold uppercase">Direct</p>
+                                </div>
+                            </label>
+                            <label>
+                                <input type="radio" name="airline" class="journey-radio">
+                                <div class="select-card text-center py-3">
+                                    <p class="text-[10px] font-black text-slate-800">EMIRATES</p>
+                                    <p class="text-[8px] text-blue-600 font-bold uppercase">Transit</p>
+                                </div>
+                            </label>
+                            <label>
+    <input type="radio" name="cabin" class="journey-radio" checked>
+    <div class="select-card text-center py-3">
+        <p class="text-[10px] font-black uppercase">Economy</p>
+    </div>
+</label>
+                            <label>
+                                <input type="radio" name="cabin" class="journey-radio">
+                                <div class="select-card text-center py-3">
+                                    <p class="text-[10px] font-black text-slate-800 uppercase">Business</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 03. Stay & Transport -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-4">
+                            <h4 class="vibrant-label"><span>03.</span> Accommodation</h4>
+                            <label class="block mb-2">
+                                <input type="radio" name="hotel" class="journey-radio" checked>
+                                <div class="select-card py-3 flex items-center justify-between">
+                                    <span class="text-[10px] font-black text-slate-800 uppercase">5 Star Luxury</span>
+                                    <i class="fas fa-crown text-amber-400 text-[10px]"></i>
+                                </div>
+                            </label>
+                            <label class="block">
+                                <input type="radio" name="hotel" class="journey-radio">
+                                <div class="select-card py-3 flex items-center justify-between">
+                                    <span class="text-[10px] font-black text-slate-800 uppercase">4 Star Walking</span>
+                                    <i class="fas fa-walking text-blue-500 text-[10px]"></i>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="vibrant-label"><span>04.</span> Transport</h4>
+                            <label class="block mb-2">
+                                <input type="radio" name="trans" class="journey-radio" checked>
+                                <div class="select-card py-3 flex items-center justify-between">
+                                    <span class="text-[10px] font-black text-slate-800 uppercase">Luxury GMC</span>
+                                    <i class="fas fa-car-side text-slate-400 text-[10px]"></i>
+                                </div>
+                            </label>
+                            <label class="block">
+                                <input type="radio" name="trans" class="journey-radio">
+                                <div class="select-card py-3 flex items-center justify-between">
+                                    <span class="text-[10px] font-black text-slate-800 uppercase">Private Sedan</span>
+                                    <i class="fas fa-taxi text-slate-400 text-[10px]"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Summary Panel -->
+            <div class="lg:col-span-4 bg-slate-950 p-10 text-white flex flex-col justify-between border-l border-white/5">
+                <div>
+                    <h4 class="text-lg font-black italic border-l-4 border-blue-600 pl-4 uppercase tracking-tighter mb-8">Summary</h4>
+                    <div class="space-y-5">
+                        <div class="flex justify-between border-b border-white/10 pb-3">
+                            <p class="text-[9px] font-black text-slate-500 uppercase">Flight</p>
+                            <p class="text-[10px] font-black text-blue-400">SAUDIA DIRECT</p>
+                        </div>
+                        <div class="flex justify-between border-b border-white/10 pb-3">
+                            <p class="text-[9px] font-black text-slate-500 uppercase">Hotel</p>
+                            <p class="text-[10px] font-black text-blue-400">5 STAR FRONT LINE</p>
+                        </div>
+                        <div class="flex justify-between border-b border-white/10 pb-3">
+                            <p class="text-[9px] font-black text-slate-500 uppercase">Vehicle</p>
+                            <p class="text-[10px] font-black text-blue-400">PRIVATE GMC</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-10">
+                    <div class="flex justify-between items-end mb-8">
+                        <div>
+                            <p class="text-[10px] font-black text-slate-500 uppercase mb-1">Estimate</p>
+                            <h2 class="text-5xl font-black italic tracking-tighter">$2,150</h2>
+                        </div>
+                    </div>
+                    <button class="glow-btn w-full py-5 rounded-2xl font-black uppercase tracking-widest text-[10px]">
+                        Initialize Booking
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Why Us Section -->
+<section class="py-20 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">Why Us ?</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Card 1 -->
+      <label>
+        <input type="radio" name="why-us" class="why-check">
+        <div class="why-card p-8 rounded-2xl flex space-x-4">
+          <i class="fas fa-arrow-right-rotate mt-1 text-xl icon-box"></i>
+          <div>
+            <h3 class="font-bold text-lg mb-2">Competent</h3>
+            <p class="text-xs leading-relaxed text-gray-500">The Guide are reliable in knowledge, wise, inteligent in presenting solutions so that they are able to provide calm and comfort in worship.</p>
+          </div>
+        </div>
+      </label>
+
+      <!-- Card 2 -->
+      <label>
+        <input type="radio" name="why-us" class="why-check">
+        <div class="why-card p-8 rounded-2xl flex space-x-4">
+          <i class="fas fa-arrow-right-rotate mt-1 text-xl icon-box"></i>
+          <div>
+            <h3 class="font-bold text-lg mb-2">Affordable Rates</h3>
+            <p class="text-xs leading-relaxed text-gray-500">The Guide are reliable in knowledge, wise, inteligent in presenting solutions so that they are able to provide calm and comfort in worship.</p>
+          </div>
+        </div>
+      </label>
+
+      <!-- Card 3 -->
+      <label>
+        <input type="radio" name="why-us" class="why-check">
+        <div class="why-card p-8 rounded-2xl flex space-x-4">
+          <i class="fas fa-arrow-right-rotate mt-1 text-xl icon-box"></i>
+          <div>
+            <h3 class="font-bold text-lg mb-2">Responsive</h3>
+            <p class="text-xs leading-relaxed text-gray-500">The Guide are reliable in knowledge, wise, inteligent in presenting solutions so that they are able to provide calm and comfort in worship.</p>
+          </div>
+        </div>
+      </label>
+
+      <!-- Card 4 (Default Checked) -->
+      <label>
+        <input type="radio" name="why-us" class="why-check" checked>
+        <div class="why-card p-8 rounded-2xl flex space-x-4">
+          <i class="fas fa-arrow-right-rotate mt-1 text-xl icon-box"></i>
+          <div>
+            <h3 class="font-bold text-lg mb-2">Trust & Safety</h3>
+            <p class="text-xs leading-relaxed text-gray-500">The Guide are reliable in knowledge, wise, inteligent in presenting solutions so that they are able to provide calm and comfort in worship.</p>
+          </div>
+        </div>
+      </label>
+    </div>
+  </div>
+</section>
+<!-- Testimonials Section -->
+<section class="relative py-24 overflow-hidden">
+  <!-- Background Image Banner -->
+  <div class="absolute inset-0 z-0">
+    <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&q=80&w=1500" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-white/20"></div> <!-- Subtle Light Overlay -->
+  </div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-slate-900 mb-12">"What's our Client say"</h2>
+    
+    <div class="max-w-md bg-white p-8 rounded-3xl shadow-xl">
+      <p class="text-gray-600 text-sm leading-relaxed mb-6">
+        Working with this company has been a breath of air. They've streamlined our hiring process, delivering top-quality candidates who align perfectly
+      </p>
+      
+      <div class="flex items-center space-x-4">
+        <img src="https://i.pravatar.cc/150?u=hasnat" class="w-12 h-12 rounded-full border-2 border-white shadow-md">
+        <div>
+          <div class="flex text-amber-400 text-[10px] mb-1">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <h4 class="font-bold text-slate-900 text-sm">Mohammed hasnat</h4>
+          <p class="text-gray-400 text-[10px] uppercase tracking-wider">Online Entrepreneur</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="flex space-x-4 mt-8">
+      <button class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md hover:bg-gray-100 transition-all">
+        <i class="fas fa-arrow-left text-sm"></i>
+      </button>
+      <button class="w-10 h-10 rounded-full bg-amber-400 flex items-center justify-center shadow-md hover:bg-amber-500 transition-all">
+        <i class="fas fa-arrow-right text-sm"></i>
+      </button>
+    </div>
+  </div>
+</section>
+<!-- Haramain News Section (2 Rows Fixed) -->
+<section class="bg-white pt-16 pb-0">
+    <div class="max-w-6xl mx-auto px-6">
+        
+        <!-- Header -->
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="text-3xl font-black text-slate-900 tracking-tight">Haramain News</h2>
+            <a href="#" class="text-sm font-bold text-slate-500 hover:text-blue-600 transition-colors">
+                See More <i class="fas fa-chevron-right ml-1 text-[10px]"></i>
+            </a>
+        </div>
+
+        <!-- News Grid (2 Rows Configuration) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-6"> <!-- gap-y barhaya hai rows ke darmiyan space ke liye -->
+            
+            <!-- Row 1: News Card 1 -->
+            <div class="group cursor-pointer">
+                <div class="rounded-[30px] overflow-hidden mb-4 aspect-[4/3] shadow-md border border-gray-100">
+                    <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=600" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors px-1">
+                    Essential Packing Tips for Your Hajj
+                </h3>
+            </div>
+
+            <!-- Row 1: News Card 2 -->
+            <div class="group cursor-pointer">
+                <div class="rounded-[30px] overflow-hidden mb-4 aspect-[4/3] shadow-md border border-gray-100">
+                    <img src="https://images.unsplash.com/photo-1591004272853-1462c050dca8?q=80&w=275&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors px-1">
+                    Personal Stories from the Sacred Journey
+                </h3>
+            </div>
+
+            <!-- Row 1: News Card 3 -->
+            <div class="group cursor-pointer">
+                <div class="rounded-[30px] overflow-hidden mb-4 aspect-[4/3] shadow-md border border-gray-100">
+                    <img src="https://plus.unsplash.com/premium_photo-1676925875726-5e8e130168bd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGhhamp8ZW58MHx8MHx8fDA%3D" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors px-1">
+                    The Ultimate Guide to Performing Umrah
+                </h3>
+            </div>
+
+            <!-- Row 2: News Card 4 -->
+            <div class="group cursor-pointer">
+                <div class="rounded-[30px] overflow-hidden mb-4 aspect-[4/3] shadow-md border border-gray-100">
+                    <img src="https://images.unsplash.com/photo-1513072064285-240f87fa81e8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhhamp8ZW58MHx8MHx8fDA%3D" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors px-1">
+                    Historical Significance of Ziyarat Sites
+                </h3>
+            </div>
+
+            <!-- Row 2: News Card 5 -->
+            <div class="group cursor-pointer">
+                <div class="rounded-[30px] overflow-hidden mb-4 aspect-[4/3] shadow-md border border-gray-100">
+                    <img src="https://plus.unsplash.com/premium_photo-1678236886582-70c1e00b6b8d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFra2FofGVufDB8fDB8fHww" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors px-1">
+                    Health and Wellness Tips for Pilgrims
+                </h3>
+            </div>
+
+            <!-- Row 2: News Card 6 -->
+            <div class="group cursor-pointer">
+                <div class="rounded-[30px] overflow-hidden mb-4 aspect-[4/3] shadow-md border border-gray-100">
+                    <img src="https://images.unsplash.com/photo-1580418827493-f2b22c0a76cb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fG1ha2thaHxlbnwwfHwwfHx8MA%3D%3D" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <h3 class="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors px-1">
+                    Navigating Local Logistics in Makkah
+                </h3>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- CTA Banner & Footer Overlap Section -->
+<section class="relative bg-white pt-20">
+    <!-- CTA Banner -->
+    <div class="max-w-6xl mx-auto px-6 relative z-20">
+        <div class="relative rounded-[40px] overflow-hidden h-[380px] flex items-center justify-center text-center shadow-2xl translate-y-1/2">
+            <!-- Background Image -->
+            <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&q=80&w=1500" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/70"></div>
+
+            <div class="relative z-10 text-white px-4">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">Are you Ready ?</h2>
+                <p class="text-gray-300 text-sm max-w-lg mx-auto mb-10 leading-relaxed font-light">
+                    Select from best plans, ensuring a perfect match. Need more or less? <br>
+                    Cuztomize your subscription for a seamless fit.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <button class="px-10 py-4 bg-amber-400 text-slate-900 font-bold rounded-full hover:bg-amber-500 transition-all shadow-xl">
+                        Hajj Pre Registration
+                    </button>
+                    <button class="px-10 py-4 bg-white text-slate-900 font-bold rounded-full hover:bg-gray-100 transition-all shadow-xl">
+                        30% Off Package
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="bg-[#0f172a] text-white pt-60 pb-10">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+            
+            <!-- Brand Info -->
+            <div class="space-y-6">
+                <div class="text-2xl font-bold tracking-tight">
+                    <span class="text-amber-400">⚡</span> Firqah_<span class="text-white">Travel</span>
+                </div>
+                <p class="text-gray-400 text-[11px] leading-relaxed max-w-[250px]">
+                    Pioneering Advanced Medical Solutions to Elevate Healthcare Service and Improve Patient Outcomes.
+                </p>
+                <div class="flex space-x-4 text-gray-400">
+                    <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-blue-400"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="hover:text-pink-400"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- What We Offer -->
+            <div>
+                <h4 class="text-lg font-bold mb-8">What We Offer</h4>
+                <ul class="space-y-4 text-xs text-gray-400">
+                    <li class="hover:text-white transition-colors cursor-pointer">→ Hajj offer</li>
+                    <li class="hover:text-white transition-colors cursor-pointer">→ Umrah offer</li>
+                    <li class="hover:text-white transition-colors cursor-pointer">→ Zamzam Offer</li>
+                    <li class="hover:text-white transition-colors cursor-pointer">→ Madina to Makkah</li>
+                </ul>
+            </div>
+
+            <!-- Contact Us -->
+            <div>
+                <h4 class="text-lg font-bold mb-8">Contact Us</h4>
+                <ul class="space-y-5 text-xs text-gray-400">
+                    <li class="flex items-start">
+                        <i class="fas fa-location-arrow mt-1 mr-3 text-amber-400"></i>
+                        <span>Chittagong, Bangladesh</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone-alt mr-3 text-amber-400"></i>
+                        <span>Phone: (+88) 01815790063</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Gallery -->
+            <div>
+                <h4 class="text-lg font-bold mb-8">Gallery</h4>
+                <div class="grid grid-cols-3 gap-2">
+                    <img src="https://images.unsplash.com/photo-1720195899208-d5555176d1d9?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-12 object-cover rounded-md">
+                    <img src="https://images.unsplash.com/photo-1735405227277-9c39ae38647a?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-full h-12 object-cover rounded-md">
+                    <img src="https://images.unsplash.com/photo-1564769625905-50e93615e769?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8dW1yYWh8ZW58MHx8MHx8fDA%3D" class="w-full h-12 object-cover rounded-md">
+                    <img src="https://plus.unsplash.com/premium_photo-1678236886582-70c1e00b6b8d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFra2FofGVufDB8fDB8fHww" class="w-full h-12 object-cover rounded-md">
+                    <img src="https://images.unsplash.com/photo-1513072064285-240f87fa81e8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGhhamp8ZW58MHx8MHx8fDA%3D" class="w-full h-12 object-cover rounded-md">
+                    <img src="https://plus.unsplash.com/premium_photo-1678236886582-70c1e00b6b8d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bWFra2FofGVufDB8fDB8fHww" class="w-full h-12 object-cover rounded-md">
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-800/50 pt-10 max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-500 uppercase tracking-widest gap-4">
+            <p>© Copy right firqah travel all right reserved</p>
+            <p>we accept the following payment methods</p>
+            <div class="flex space-x-3 grayscale opacity-30">
+                <i class="fab fa-cc-visa text-xl"></i>
+                <i class="fab fa-cc-mastercard text-xl"></i>
+                <i class="fab fa-cc-paypal text-xl"></i>
+            </div>
+        </div>
+    </footer>
+</section>
+</body>
+</html>

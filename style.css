@@ -1,0 +1,227 @@
+
+      :root {
+    --primary-blue: #1e40af;
+    --secondary-blue: #3b82f6;
+    --bg-white: #ffffff;
+    --card-blue: #0f172a; 
+    --accent-yellow: #facc15; 
+}
+
+/* Hero Section Specific Styles */
+.hero-overlay {
+ 
+    background: linear-gradient(
+        to bottom, 
+        rgba(15, 23, 42, 0.4) 0%, 
+        rgba(15, 23, 42, 0.1) 30%, 
+        rgba(15, 23, 42, 0.1) 70%, 
+        rgba(15, 23, 42, 0.6) 100%
+    );
+    pointer-events: none; /* Taake image par click/interaction mein masla na ho */
+}
+
+.nav-blur {
+    background: rgba(15, 23, 42, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cta-button {
+    background-color: var(--accent-yellow);
+    color: var(--card-blue);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-button:hover {
+    background-color: var(--bg-white);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(250, 204, 21, 0.3);
+}
+
+/* Radio Button Hide Karne Ke Liye */
+.package-input { display: none; }
+
+/* Default (White) Card Styling */
+.package-label {
+    display: block;
+    cursor: pointer;
+    background: #ffffff;
+    border-radius: 50px;
+    /* UPDATE: Padding 1rem se 0 kar di taake image corners ko touch kare */
+    padding: 0; 
+    /* UPDATE: overflow-hidden zaroori hai taake image rounded corners ke andar rahay */
+    overflow: hidden; 
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #f3f4f6;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+}
+
+/* Selected (Black) Card Styling via CSS :checked */
+.package-input:checked + .package-label {
+    background: #0f172a; /* Slate-900 */
+    color: #ffffff;
+    transform: scale(1.05);
+    z-index: 20;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.3);
+}
+
+/* Text & Icon Changes When Selected */
+.package-input:checked + .package-label h2,
+.package-input:checked + .package-label h3,
+.package-input:checked + .package-label span,
+.package-input:checked + .package-label p {
+    color: #ffffff !important;
+}
+
+.package-input:checked + .package-label .feature-text {
+    color: #cbd5e1 !important; /* slate-300 */
+}
+
+/* Icon Background Adjustment */
+.package-input:checked + .package-label .icon-box {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.package-input:checked + .package-label .icon-box i {
+    color: #fbbf24 !important; /* amber-400 for contrast */
+}
+
+/* Selected Card Button Change (Optional) */
+.package-input:checked + .package-label .book-btn {
+    background: #fbbf24; /* amber-400 */
+    color: #0f172a;
+}
+
+/* Header Image Hover Effect */
+.package-label:hover img {
+    transform: scale(1.1);
+}
+
+/* ----------------------------------------------------------- */
+/* ADDITIONAL FIX: Taake niche wala text edges se na jur jaye */
+/* ----------------------------------------------------------- */
+.package-label > div:nth-child(2) {
+    padding: 2rem; /* Yeh sirf text area ko padding dega */
+}
+
+.package-label img {
+    width: 100%;
+    display: block;
+}
+
+/* ----------------------------------------------------------- */
+/* Baki aapka purana pricing card logic (No changes here) */
+/* ----------------------------------------------------------- */
+.package-check:checked + .pricing-card {
+    background-color: var(--card-blue) !important;
+    color: #ffffff !important;
+    border-color: var(--primary-blue);
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.4);
+}
+
+.package-check:checked + .pricing-card .text-slate-900,
+.package-check:checked + .pricing-card .text-gray-700,
+.package-check:checked + .pricing-card .text-gray-500 {
+    color: #ffffff !important;
+}
+
+.package-check:checked + .pricing-card .fa-check {
+    color: var(--primary-blue) !important;
+}
+
+.package-check:checked + .pricing-card .save-badge {
+    border-color: rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.6);
+}
+  /* Selection Logic for Why Us Cards */
+  .why-check { display: none; }
+  
+  .why-card {
+    background-color: #ffffff;
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  /* Selected State */
+  .why-check:checked + .why-card {
+    background-color: #0f172a !important; /* Dark Navy Blue */
+    color: #ffffff !important;
+    border-color: #0f172a;
+  }
+
+  .why-check:checked + .why-card p {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+
+  .why-check:checked + .why-card .icon-box {
+    color: #ffffff !important;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+/* Purani Builder CSS ko hata kar yeh lagayein */
+
+/* Radio logic hidden */
+.journey-radio { display: none; }
+
+/* --- COMPACT PREMIUM CARDS --- */
+.select-card {
+    cursor: pointer;
+    background: white;
+    border-radius: 20px;
+    padding: 1rem; 
+    border: 2px solid #f1f5f9;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.select-card:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-3px);
+}
+
+/* --- FOCUSED / CHECKED STATE --- */
+.journey-radio:checked + .select-card {
+    border-color: #2563eb;
+    background: #f0f7ff;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.1);
+}
+
+/* Vibrant Sub-headings (Ab dull nahi dikhengi) */
+.vibrant-label {
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #1e293b; /* Strong Slate color */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vibrant-label span {
+    color: #2563eb; /* Vibrant Blue for numbers */
+}
+
+/* Refined Action Button */
+.glow-btn {
+    background: #2563eb;
+    color: white;
+    transition: all 0.4s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.glow-btn:hover {
+    background: #1e40af;
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.3);
+}
+    
