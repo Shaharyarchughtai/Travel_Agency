@@ -224,4 +224,12 @@
     background: #1e40af;
     box-shadow: 0 12px 25px rgba(37, 99, 235, 0.3);
 }
-    
+    /* Airline Marque */
+        @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); } /* Move by half the duplicated content width */
+    }
+    .animate-marquee {
+        display: flex;
+        animation: marquee 25s linear infinite; /* Adjust speed as needed */
+    }
