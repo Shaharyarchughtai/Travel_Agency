@@ -66,3 +66,25 @@ var packageSwiper = new Swiper(".packageSwiper", {
         1280: { slidesPerView: 4 } // Exactly 4 cards on desktop
     },
 });
+
+function showHotels(category) {
+    document.querySelectorAll('.hotel-section').forEach(section => section.classList.add('hidden'));
+    document.getElementById(category + '-content').classList.remove('hidden');
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active-tab');
+        btn.classList.add('inactive-tab');
+    });
+    document.getElementById('btn-' + category).classList.add('active-tab');
+    document.getElementById('btn-' + category).classList.remove('inactive-tab');
+}
+
+function showTransport(category) {
+    document.querySelectorAll('.transport-section').forEach(section => section.classList.add('hidden'));
+    document.getElementById(category + '-content').classList.remove('hidden');
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active-tab');
+        btn.classList.add('inactive-tab');
+    });
+    document.getElementById('btn-' + category).classList.add('active-tab');
+    document.getElementById('btn-' + category).classList.remove('inactive-tab');
+}

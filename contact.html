@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - WesternAero Travel</title>  
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50">
+
+<header class="relative h-[70vh] min-h-[500px] w-full overflow-hidden bg-gray-900">
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvbnRhY3R8ZW58MHx8MHx8fDA%3D" 
+             alt="Contact Us Banner" 
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/60 z-0"></div> 
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+    <nav class="fixed top-0 w-full z-50 nav-blur flex items-center justify-between px-6 md:px-10 py-5 text-white border-b border-white/5">
+        <div class="text-xl md:text-2xl font-black tracking-tighter uppercase italic">
+            WesternAero_<span class="text-[var(--secondary-blue)]">Travel</span>
+        </div>
+        
+        <ul class="hidden lg:flex items-center space-x-8 text-[10px] font-black uppercase tracking-[0.2em]">
+            <li><a href="index.html" class="hover:text-[var(--secondary-blue)] transition-all">Home</a></li>
+            <li><a href="about.html" class="hover:text-[var(--secondary-blue)] transition-all">About Us</a></li>
+            
+            <li class="relative group cursor-pointer py-2">
+                <div class="flex items-center gap-1.5 hover:text-[var(--secondary-blue)]">
+                    Packages <i class="fas fa-chevron-down text-[7px] group-hover:rotate-180 transition-all"></i>
+                </div>
+                <div class="absolute top-full left-[-20px] pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <ul class="w-56 bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl p-2 shadow-2xl">
+                        <li><a href="umrah.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10 hover:text-[var(--secondary-blue)]"><i class="fas fa-kaaba text-xs opacity-50"></i> Umrah Packages</a></li>
+                        <li><a href="hajj.html" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10 hover:text-[var(--secondary-blue)]"><i class="fas fa-mosque text-xs opacity-50"></i> Hajj Packages</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="relative group cursor-pointer py-2">
+                <div class="flex items-center gap-1.5 hover:text-[var(--secondary-blue)]">
+                    Hotels <i class="fas fa-chevron-down text-[7px] group-hover:rotate-180 transition-all"></i>
+                </div>
+                <div class="absolute top-full left-[-20px] pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <ul class="w-56 bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl p-2 shadow-2xl">
+                        <li><a href="hotels.html#5-star" class="block px-4 py-3 rounded-xl hover:bg-white/10">5 Star Hotels</a></li>
+                        <li><a href="hotels.html#4-star" class="block px-4 py-3 rounded-xl hover:bg-white/10">4 Star Hotels</a></li>
+                        <li><a href="hotels.html#3-star" class="block px-4 py-3 rounded-xl hover:bg-white/10">3 Star Hotels</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="relative group cursor-pointer py-2">
+                <div class="flex items-center gap-1.5 hover:text-[var(--secondary-blue)]">
+                    Transport <i class="fas fa-chevron-down text-[7px] group-hover:rotate-180 transition-all"></i>
+                </div>
+                <div class="absolute top-full left-[-20px] pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <ul class="w-56 bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl p-2 shadow-2xl">
+                        <li><a href="transport.html#luxury" class="block px-4 py-3 rounded-xl hover:bg-white/10">VIP GMC Yukon</a></li>
+                        <li><a href="transport.html#family" class="block px-4 py-3 rounded-xl hover:bg-white/10">Hyundai H1 (Van)</a></li>
+                        <li><a href="transport.html#economy" class="block px-4 py-3 rounded-xl hover:bg-white/10">Private Sedan</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li><a href="contact.html" class="text-[var(--secondary-blue)] transition-all">Contact</a></li>
+        </ul>
+
+        <div class="flex items-center space-x-5">
+            <label for="menu-toggle" class="lg:hidden text-2xl cursor-pointer z-[110] select-none text-white">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="hidden lg:block bg-[var(--primary-blue)] p-2.5 rounded-xl cursor-pointer shadow-lg hover:bg-blue-700 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+        <h1 class="text-6xl md:text-[90px] font-black uppercase tracking-tighter leading-none italic mb-4">
+            GET IN <span class="text-[var(--secondary-blue)]">TOUCH</span>
+        </h1>
+        <p class="text-[10px] md:text-xl font-bold tracking-[0.4em] uppercase text-gray-200 opacity-80">
+            We are here to guide your sacred journey
+        </p>
+    </div>
+</header>
+
+<main class="bg-slate-50 py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            
+            <div class="space-y-10">
+                <div>
+                    <span class="text-[var(--secondary-blue)] font-black tracking-[0.3em] uppercase text-[10px] mb-4 block">Contact Details</span>
+                    <h2 class="text-4xl md:text-5xl font-black text-slate-900 uppercase italic tracking-tighter leading-none mb-6">
+                        Let's Talk About Your <br> <span class="text-[var(--secondary-blue)]">Next Trip</span>
+                    </h2>
+                    <p class="text-gray-500 max-w-md leading-relaxed">
+                        Have questions about our Hajj or Umrah packages? Our dedicated team in Karachi is ready to provide you with all the information you need.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="flex items-center gap-6 group cursor-pointer">
+                        <div class="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white group-hover:rotate-6 transition-all duration-300">
+                            <i class="fas fa-phone-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-black uppercase tracking-widest text-gray-400">Call Us 24/7</p>
+                            <p class="text-lg font-black text-slate-900">(+92) 300 1234567</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-6 group cursor-pointer">
+                        <div class="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white group-hover:rotate-6 transition-all duration-300">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-black uppercase tracking-widest text-gray-400">Email Us</p>
+                            <p class="text-lg font-black text-slate-900">info@westernaero.com</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-6 group cursor-pointer">
+                        <div class="w-14 h-14 bg-white shadow-sm rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white group-hover:rotate-6 transition-all duration-300">
+                            <i class="fas fa-map-marker-alt text-xl"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-black uppercase tracking-widest text-gray-400">Visit Office</p>
+                            <p class="text-lg font-black text-slate-900">Karachi, Pakistan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-blue-100 rounded-full blur-3xl opacity-50 -z-10"></div>
+                <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-amber-100 rounded-full blur-3xl opacity-50 -z-10"></div>
+
+                <div class="bg-white/80 backdrop-blur-xl rounded-[40px] p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-white">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="group space-y-2">
+                                <label class="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-2 group-focus-within:text-blue-600 transition-colors">Full Name</label>
+                                <div class="relative">
+                                    <i class="fas fa-user absolute left-5 top-1/2 -translate-y-1/2 text-gray-300 text-xs group-focus-within:text-blue-600 transition-colors"></i>
+                                    <input type="text" placeholder="e.g. Shaharyar" class="w-full pl-12 pr-6 py-4 bg-slate-50 border border-transparent rounded-2xl focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-50 outline-none transition-all duration-300 placeholder:text-gray-300">
+                                </div>
+                            </div>
+                            <div class="group space-y-2">
+                                <label class="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-2 group-focus-within:text-blue-600 transition-colors">Email Address</label>
+                                <div class="relative">
+                                    <i class="fas fa-envelope absolute left-5 top-1/2 -translate-y-1/2 text-gray-300 text-xs group-focus-within:text-blue-600 transition-colors"></i>
+                                    <input type="email" placeholder="shaharyar@mail.com" class="w-full pl-12 pr-6 py-4 bg-slate-50 border border-transparent rounded-2xl focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-50 outline-none transition-all duration-300 placeholder:text-gray-300">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="group space-y-2">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-2 group-focus-within:text-blue-600 transition-colors">Service Interest</label>
+                            <div class="relative">
+                                <i class="fas fa-list absolute left-5 top-1/2 -translate-y-1/2 text-gray-300 text-xs group-focus-within:text-blue-600 transition-colors pointer-events-none"></i>
+                                <select class="w-full pl-12 pr-6 py-4 bg-slate-50 border border-transparent rounded-2xl focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-50 outline-none transition-all duration-300 appearance-none cursor-pointer">
+                                    <option>Umrah Package Inquiry</option>
+                                    <option>Hajj Registration</option>
+                                    <option>Hotel Booking</option>
+                                    <option>Transport Service</option>
+                                </select>
+                                <i class="fas fa-chevron-down absolute right-5 top-1/2 -translate-y-1/2 text-gray-300 text-[10px] pointer-events-none"></i>
+                            </div>
+                        </div>
+
+                        <div class="group space-y-2">
+                            <label class="text-[10px] font-black uppercase tracking-widest text-gray-400 ml-2 group-focus-within:text-blue-600 transition-colors">Your Message</label>
+                            <div class="relative">
+                                <i class="fas fa-pen absolute left-5 top-5 text-gray-300 text-xs group-focus-within:text-blue-600 transition-colors"></i>
+                                <textarea rows="4" placeholder="How can we help you today?" class="w-full pl-12 pr-6 py-4 bg-slate-50 border border-transparent rounded-2xl focus:bg-white focus:border-blue-600 focus:ring-4 focus:ring-blue-50 outline-none transition-all duration-300 placeholder:text-gray-300 resize-none"></textarea>
+                            </div>
+                        </div>
+
+                        <button class="w-full py-5 bg-slate-900 text-white font-black uppercase tracking-[0.25em] rounded-2xl hover:bg-blue-600 hover:-translate-y-1 transition-all duration-300 shadow-xl shadow-blue-900/10 active:scale-95 flex items-center justify-center gap-3 group">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane text-[10px] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<section class="relative bg-white pt-20">
+    <div class="max-w-6xl mx-auto px-6 relative z-20">
+        <div class="relative rounded-[40px] overflow-hidden h-[380px] flex items-center justify-center text-center shadow-2xl translate-y-1/2">
+            <img src="https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&q=80&w=1500" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/70"></div>
+            <div class="relative z-10 text-white px-4">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">Are you Ready?</h2>
+                <p class="text-gray-300 text-sm max-w-lg mx-auto mb-10 leading-relaxed font-light">
+                    Select from best plans, ensuring a perfect match.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <button class="px-10 py-4 bg-amber-400 text-slate-900 font-bold rounded-full hover:bg-amber-500 transition-all shadow-xl">
+                        Hajj Pre Registration
+                    </button>
+                    <button class="px-10 py-4 bg-white text-slate-900 font-bold rounded-full hover:bg-gray-100 transition-all shadow-xl">
+                        30% Off Package
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-[#0f172a] text-white pt-60 pb-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+            <div class="space-y-6">
+                <div class="text-2xl font-bold tracking-tight italic">
+                    <span class="text-amber-400">⚡</span> WesternAero_<span class="text-white">Travel</span>
+                </div>
+                <p class="text-gray-400 text-[11px] leading-relaxed max-w-[250px]">
+                    Over 20 years of excellence in providing spiritual journeys.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-8">What We Offer</h4>
+                <ul class="space-y-4 text-xs text-gray-400 font-medium">
+                    <li>→ Hajj offer</li>
+                    <li>→ Umrah offer</li>
+                    <li>→ Zamzam Offer</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-8">Contact Us</h4>
+                <ul class="space-y-5 text-xs text-gray-400 font-medium">
+                    <li><i class="fas fa-location-arrow mt-1 mr-3 text-amber-400"></i>Karachi, Pakistan</li>
+                    <li><i class="fas fa-phone-alt mr-3 text-amber-400"></i>(+92) 300 1234567</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-8">Gallery</h4>
+                <div class="grid grid-cols-3 gap-2">
+                    <img src="https://images.unsplash.com/photo-1720195899208-d5555176d1d9?q=80&w=150" class="w-full h-12 object-cover rounded-md">
+                    <img src="https://images.unsplash.com/photo-1735405227277-9c39ae38647a?q=80&w=150" class="w-full h-12 object-cover rounded-md">
+                    <img src="https://images.unsplash.com/photo-1564769625905-50e93615e769?w=150" class="w-full h-12 object-cover rounded-md">
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800/50 pt-10 text-center text-[10px] text-gray-500 uppercase">
+            © Copy right Firqah Travel all rights reserved
+        </div>
+    </footer>
+</section>
+
+</body>
+</html>
